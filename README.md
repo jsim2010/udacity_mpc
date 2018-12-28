@@ -7,7 +7,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 ### Student describes their model in detail. This includes the state, actuators and update equations
 
-The state of the vehicle includes the following: x, y, psi, speed, throttle, steering angle, and some waypoints that indicate the desired path. These variables are processed and then provided to the MPC procedure. The MPC procedure returns the desired throttle and steering angle actuators values for the vehicle to execute.
+The state of the vehicle includes the following: x, y, psi, speed, throttle, steering angle, and some waypoints that indicate the desired path. These variables are processed and then provided to the MPC procedure. The MPC procedure returns the desired throttle and steering angle actuator values for the vehicle to execute.
 
 The MPC procedure operates by calculating the cost of modifying the actuators for N timesteps and choosing the actuator values that produce the smallest cost. This cost is composed of the following values:
 - cte
@@ -22,7 +22,7 @@ After much trial and error, I found that strongly weighting the epsi value in th
 
 ### Student discusses the reasoning behind the chosen N (timestep length) and dt (elapsed duration between timesteps) values. Additionally the student details the previous values tried
 
-The dt was chosen to be 0.1 seconds. This was choosen because it matched the actuator latency. A timestep length of 10 was choosen to provide a decent amount of vision into the future without causing the calculation to take too long.
+The dt was chosen to be 0.1 seconds. This was choosen because it matched the actuator latency. A timestep length of 10 was choosen to provide a decent amount of vision into the future without causing the calculation to take too long. No previous values were tried.
 
 ### If the student preprocesses waypoints, the vehicle state, and/or actuators prior to the MPC procedure it is described
 
